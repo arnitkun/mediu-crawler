@@ -16,7 +16,7 @@ var arr = [];
 const request = require('request')
 const cheerio = require('cheerio')
 
-baseUrl = 'http://medium.com'
+const baseUrl = 'https://medium.com'
 
 function sendRequest(url){
 request(url, (err, res, body) => {
@@ -35,14 +35,18 @@ request(url, (err, res, body) => {
 function parseUrl(html, url){
     $ = cheerio.load(html);
     links = $('a');
-    extractedLinks = []
+    // console.log(links)
+    extractedLinks = [];
+    
+    extractedLinks.push(url);
     // console.log(extractedLinks.length)
     $(links).each(function(i, link){
-        if($(link).attr('href').startsWith('https://medium.com'))
-        {console.log($(link).attr('href'));
+        pureLink = $(link).attr('href')
+        if(pureLink.startsWith(url) && !extractedLinks.includes(pureLink))
+        {//console.log($(link).attr('href'));
         extractedLinks.push($(link).attr('href'))}
     })
-    //console.log(extractedLinks.length);
+    console.log(extractedLinks);
     saveLinks_Init(extractedLinks);
     return extractedLinks.length;//reference number of the url
 }
