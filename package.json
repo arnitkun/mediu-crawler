@@ -1,0 +1,30 @@
+{
+  "name": "medium-crawler",
+  "version": "1.0.0",
+  "description": "A crawler for medium.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnitkun/medium-crawler.git"
+  },
+  "author": "Ankit Arun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arnitkun/medium-crawler/issues"
+  },
+  "homepage": "https://github.com/arnitkun/medium-crawler#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "fetch": "^1.1.0",
+    "mongodb": "^3.3.5",
+    "mongoose": "^5.7.13",
+    "node-fetch": "^2.6.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5",
+    "url-parse": "^1.4.7"
+  }
+}
