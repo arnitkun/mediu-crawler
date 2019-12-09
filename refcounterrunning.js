@@ -1,6 +1,6 @@
 const url = require('url-parse');
 const parseParams =  require('./parseParams')
-
+//sample data to test
 const arr = { 'http://www.medium.com': true,
   'http://www.medium.com/policy/9db0094a1e0f?source=landing_home---------------------------': true,
   'http://www.medium.com/policy/9db0094a1e0f?source=post_page-----9db0094a1e0f----------------------': true,
