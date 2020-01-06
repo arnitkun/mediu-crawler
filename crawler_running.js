@@ -90,14 +90,3 @@ function collectInternalLinks($) {
     });
 }
 
-// function collectExternalLinks($){
-//     var absoluteLinks = $("a[href^='http']");
-//     console.log("Found " + absoluteLinks.length + " absolute links on page")
-//     absoluteLinks.each(function() {
-//         targetLink = $(this).attr('href')
-//         if(targetLink.startsWith(baseUrl))
-//         pagesToVisit.push(targetLink);
-//     });
-//     console.log(pagesToVisit.length)
-//     console.log(pagesToVisit)
-// }
